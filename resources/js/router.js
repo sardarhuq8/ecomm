@@ -4,7 +4,14 @@ Vue.use(Router);
 
 import testPage from "./test.vue";
 
-const routes = [{ path: "/testpage", component: testPage }];
+// import account routes
+
+import accountRoutes from "../../Modules/Accounts/Resources/assets/js/router";
+
+const defaultRoutes = [{ path: "/testpage", component: testPage }];
+
+var routes = [];
+routes = routes.concat(defaultRoutes, accountRoutes);
 
 export default new Router({
     mode: "history",
