@@ -11,6 +11,9 @@
 |
 */
 
-Route::prefix('app/accounts')->group(function() {
-    Route::get('/', 'AccountsController@index');
+// Route::prefix('app/accounts')->group(function() {
+//     Route::get('/', 'AccountsController@index');
+// });
+Route::any('{slug}', function () {
+    return view('index');
 });
