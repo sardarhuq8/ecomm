@@ -15,5 +15,5 @@ Route::prefix('app/products')->group(function () {
     Route::get('/', 'ProductsController@index');
 });
 Route::any('{slug}', function () {
-    return view('products::index');
-});
+    return view('welcome');
+})->where('slug', '([A-z\d\-\/_.]+)');
